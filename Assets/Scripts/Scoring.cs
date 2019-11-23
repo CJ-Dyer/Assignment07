@@ -43,11 +43,11 @@ public class Scoring : MonoBehaviour
             HighScoreText.color = Color.green;
         }
 
-        TotalScore = WordDisplay.score - WordDisplay.wordsMissed;
+        TotalScore = WordDisplay.score - WordDestroy.wordsMissed;
 
         if (File.Exists(path))
         {
-            string[] createText = {  SettingsManager.PlayerName + "," + TotalScore.ToString() };
+            string[] createText = {  SettingsManager.PlayerName + " " + TotalScore.ToString() };
             File.AppendAllLines(path, createText);
         }
         else
@@ -64,7 +64,7 @@ public class Scoring : MonoBehaviour
 
         TotalScoreText.text = "Total Score: " + TotalScore.ToString();
         ScoreText.text = "Score: " + WordDisplay.score.ToString();
-        MissedWordsText.text = "Words Missed: " + WordDisplay.wordsMissed.ToString();
+        MissedWordsText.text = "Words Missed: " + WordDestroy.wordsMissed.ToString();
         PlayerNameText.text = SettingsManager.PlayerName;
     }
 }

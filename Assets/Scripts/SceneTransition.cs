@@ -7,11 +7,15 @@ public class SceneTransition : MonoBehaviour
 {
     public void PlayGame()
     {
+        WordDisplay.score = 0;
+        WordDestroy.wordsMissed = 0;
         SceneManager.LoadScene("MainScene");
     }
 
     public void MainMenu()
     {
+        WordDisplay.score = 0;
+        WordDestroy.wordsMissed = 0;
         SceneManager.LoadScene("IntroScene");
     }
 

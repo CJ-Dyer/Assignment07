@@ -8,7 +8,6 @@ public class WordDisplay : MonoBehaviour
     public Text text;
 
     public static int score = 0;
-    public static int wordsMissed = 0;
 
     public void SetWord(string word)
     {
